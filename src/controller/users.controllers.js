@@ -61,6 +61,8 @@ module.exports.login = (req, res) => {
     let sql = `select name, email_id, password from ${database}.users`;
 
     let {email_id, password} = req.body; //destructoring
+    console.log("Email ID :- "+email_id);
+    console.log("Password :- "+password);
     // console.log(email_id, password);
     let hashPassword = md5(password);
     console.log(md5(hashPassword));
