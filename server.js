@@ -30,6 +30,12 @@ mysqlConnection.connect((err) => {
     }
 })
 
+app.get('/', (req, res) => {
+    console.log("Get request");
+    res.json("GET Request Called");  
+})
+  
+
 app.use('/employee', EmployeeRoutes);
 app.use('/user', UserRoutes);
 
